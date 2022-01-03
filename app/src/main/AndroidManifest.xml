@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tpnoel">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TPNoel">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Login to play">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WaitingRoom"
+            android:parentActivityName=".MainActivity"
+            android:exported="true"
+            android:label="Waiting Room">
+        </activity>
+        <activity
+            android:name=".WaitingRoomFull"
+            android:parentActivityName=".WaitingRoom"
+            android:exported="true"
+            android:label="Waiting Room">
+        </activity>
+        <activity
+            android:name=".Game"
+            android:parentActivityName=".WaitingRoomFull"
+            android:exported="true"
+            android:label="Game">
+        </activity>
+        <activity
+            android:name=".Win"
+            android:parentActivityName=".Game"
+            android:exported="true"
+            android:label="Game Over">
+        </activity>
+        <activity
+            android:name=".Loose"
+            android:parentActivityName=".Game"
+            android:exported="true"
+            android:label="Game Over">
+        </activity>
+    </application>
+
+</manifest>
